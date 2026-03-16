@@ -1,5 +1,6 @@
 // 1. Import the express library
 const express = require('express');
+// import express from "express";
 
 const cors = require('cors');
     // 2. Initialize the express application
@@ -9,7 +10,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(cors());
+
 
 // This route receives data
 app.post('/api/user', (req, res) => {
