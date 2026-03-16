@@ -1,18 +1,15 @@
 // 1. Import the express library
 const express = require('express');
 
-// 2. Initialize the express application
+const cors = require('cors');
+    // 2. Initialize the express application
 const app = express();
 
 // 3. Define the Port number
 const PORT = 3000;
 
 app.use(express.json());
-
-// 4. Create a basic "Route" (The home page)
-app.get('/', (req, res) => {
-    res.send('Server is running successfully!');
-});
+app.use(cors());
 
 // This route receives data
 app.post('/api/user', (req, res) => {
